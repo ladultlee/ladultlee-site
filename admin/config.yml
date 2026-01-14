@@ -5,9 +5,6 @@ backend:
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
-site_url: https://ladultlee.netlify.app
-display_url: https://ladultlee.netlify.app
-
 collections:
   - name: "posts"
     label: "文章"
