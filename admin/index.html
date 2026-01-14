@@ -2,62 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Content Manager</title>
-
-    <!-- Netlify Identity -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-    <!-- Tell Decap we will initialize manually (so it won't fetch config.yml) -->
-    <script>
-      window.CMS_MANUAL_INIT = true;
-    </script>
   </head>
   <body>
-    <!-- Decap CMS -->
     <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js"></script>
-
     <script>
-      // 1) Force Identity to open if not logged in
       if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", (user) => {
+        window.netlifyIdentity.on("init", user => {
           if (!user) window.netlifyIdentity.open();
         });
       }
-
-      // 2) Manual Decap config (bypasses /admin/config.yml)
-      window.CMS.init({
-        config: {
-          backend: {
-            name: "git-gateway",
-            branch: "main"
-          },
-          media_folder: "assets/uploads",
-          public_folder: "/assets/uploads",
-
-          collections: [
-            {
-              name: "posts",
-              label: "文章",
-              folder: "posts",
-              create: true,
-              slug: "{{year}}-{{month}}-{{day}}-{{slug}}",
-              fields: [
-                { label: "标题", name: "title", widget: "string" },
-                { label: "发布日期", name: "date", widget: "datetime" },
-                {
-                  label: "所属板块",
-                  name: "category",
-                  widget: "select",
-                  options: ["职场故事", "恋恋风尘", "离地三尺"]
-                },
-                { label: "封面图片", name: "cover", widget: "image", required: false },
-                { label: "正文内容", name: "body", widget: "markdown" }
-              ]
-            }
-          ]
-        }
-      });
     </script>
   </body>
 </html>
