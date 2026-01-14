@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blog | 陪伴李</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html" aria-label="回到首页">
+      <img src="assets/logo.png" alt="陪伴李 ladultlee logo">
+    </a>
+
+    <nav class="menu" aria-label="主导航">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a class="active" href="blog.html">Blog</a>
+      <a class="btn" href="contact.html">➜ Get in touch</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <div class="kicker">BLOG</div>
+    <div class="h1">文章与连载</div>
+    <p class="p">你可以先用“列表 + 外链”发布，后续再逐步补齐文章详情页。</p>
+
+    <div style="height:26px;"></div>
+
+    <div id="work" class="h2">职场故事</div>
+    <div class="card">
+      <div class="pad">
+        <div class="h3">（示例）工作-记录-复盘-沉淀-产品化</div>
+        <p class="p">这里放摘要与链接。你可以先贴公众号/知乎/小红书的文章链接。</p>
+        <div class="meta">更新：待补</div>
+      </div>
+    </div>
+
+    <div style="height:22px;"></div>
+
+    <div id="love" class="h2">恋恋风尘</div>
+    <div class="card">
+      <div class="pad">
+        <div class="h3">（示例）在爱中学会爱</div>
+        <p class="p">这里放摘要与链接。建议每篇都标注系列编号，利于连载。</p>
+        <div class="meta">更新：待补</div>
+      </div>
+    </div>
+
+    <div style="height:22px;"></div>
+
+    <div id="cloud" class="h2">离地三尺</div>
+    <div class="card">
+      <div class="pad">
+        <div class="h3">（示例）意识流碎碎念</div>
+        <p class="p">这里放摘要与链接。纯文字栏目建议固定频率，比如每周 2 篇。</p>
+        <div class="meta">更新：待补</div>
+      </div>
+    </div>
+
+    <div style="height:22px;"></div>
+    <p class="p">你可以慢慢读，不需要一次读完。</p>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container small">© <span id="y"></span> ladultlee</div>
+</footer>
+<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+
+</body>
+</html>

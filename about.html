@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About | 陪伴李</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html" aria-label="回到首页">
+      <img src="assets/logo.png" alt="陪伴李 ladultlee logo">
+    </a>
+
+    <nav class="menu" aria-label="主导航">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a class="active" href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a class="btn" href="contact.html">➜ Get in touch</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <div class="kicker">ABOUT</div>
+    <div class="h1">我是谁</div>
+    <p class="p">
+      我在现实中行动，在关系中观照，在文字中回收与沉淀。
+      这不是个人展示页，而是一份持续更新的“自我叙事”。
+    </p>
+
+    <div style="height:18px;"></div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="pad">
+          <div class="h3">我在建设什么</div>
+          <p class="p">把经验产品化：复盘模板、资产包、连载体系、写作方法。</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="pad">
+          <div class="h3">我在练习什么</div>
+          <p class="p">在关系里练习爱，在文字里练习诚实，在现实里练习自我价值。</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="height:18px;"></div>
+
+    <div class="card">
+      <div class="pad">
+        <div class="h3">你可以在这里期待什么</div>
+        <p class="p">
+          不被催促的节奏；可被复用的方法；以及一种温柔但不软弱的理解。
+          你可以慢慢读，不需要一次读完。
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container small">© <span id="y"></span> ladultlee</div>
+</footer>
+<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+
+</body>
+</html>

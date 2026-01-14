@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: https://ladultlee.netlify.app
+display_url: https://ladultlee.netlify.app
+
+collections:
+  - name: "posts"
+    label: "文章"
+    folder: "posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "发布日期", name: "date", widget: "datetime" }
+      - { label: "所属板块", name: "category", widget: "select", options: ["职场故事", "恋恋风尘", "离地三尺"] }
+      - { label: "封面图片", name: "cover", widget: "image", required: false }
+      - { label: "正文内容", name: "body", widget: "markdown" }
