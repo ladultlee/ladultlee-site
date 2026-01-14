@@ -13,10 +13,16 @@
 
     <script>
       if (window.netlifyIdentity) {
+        // 当通过 recovery / invite / magic link 回来时
         window.netlifyIdentity.on("init", user => {
           if (!user) {
             window.netlifyIdentity.open();
           }
+        });
+
+        // 如果在首页被打开，强制跳回 /admin
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
         });
       }
     </script>
