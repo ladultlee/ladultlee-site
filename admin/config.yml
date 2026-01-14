@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "assets/uploads"
+media_folder: "src/assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
@@ -17,3 +17,4 @@ collections:
       - { label: "所属板块", name: "category", widget: "select", options: ["职场故事", "恋恋风尘", "离地三尺"] }
       - { label: "封面图片", name: "cover", widget: "image", required: false }
       - { label: "正文内容", name: "body", widget: "markdown" }
+
